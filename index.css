@@ -96,7 +96,7 @@ p {
     border-radius: 3px;
 }
 
-.terms-link {
+.tos-link {
     text-decoration: none;
     color: #c2185b;
 }
@@ -469,13 +469,20 @@ p {
 }
 
 .oper-hint-close {
-	float: right;
-	font-size: 28px;
-	cursor: pointer;
+    color: #ffffff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.oper-hint-close:hover,
+.oper-hint-close:focus {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* Modal container */
-.modal {
+.tos-modal {
     display: none; /* Hide modal by default */
     position: fixed;
     z-index: 9999;
@@ -491,7 +498,7 @@ p {
     border-radius: 10px
 }
 
-.modal-content {
+.tos-modal-content {
     background-color: #222;
 	color: #ffffff;
     margin: 5% auto; /* Adjust vertical margin for centering */
@@ -506,44 +513,44 @@ p {
 }
 
 /* Close button */
-.close {
+.tos-modal-close {
     color: #ffffff;
     float: right;
     font-size: 28px;
     font-weight: bold;
     }
 
-.close:hover,
-.close:focus {
+.tos-modal-close:hover,
+.tos-modal-close:focus {
     color: rgb(255, 0, 0);
     text-decoration: none;
     cursor: pointer;
 }
 
 /* Styling for the modal content */
-.modal-content h2 {
+.tos-modal-content h2 {
     font-size: 25px;
     font-weight: 900;
 }
 
-.modal-content h3 {
+.tos-modal-content h3 {
 	font-size: 16px;
 	font-weight: normal; /* Ensure text is not bold */
 }
 
-.modal-content p {
+.tos-modal-content p {
 	font-size: 14px;
 	font-weight: normal; /* Ensure text is not bold */
     margin-bottom: 0.5em; /* Space between list items */
     line-height: 1.5; /* Adjust line height for readability */
 }
 
-.modal-content ul {
+.tos-modal-content ul {
     padding-left: 15x; /* Indent the list */
     margin: 0 0 1em 0; /* Adjust margin */
 }
 
-.modal-content li {
+.tos-modal-content li {
     font-size: 14px; /* Match the font size of <h1> */
     font-weight: normal; /* Ensure text is not bold */
     margin-bottom: 0.5em; /* Space between list items */

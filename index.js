@@ -385,52 +385,51 @@ Ajax.post(
     }
 );
 
-// oper-hint modal
+/////////////////////
+// oper-hint modal //
+/////////////////////
+
 function showOperHintModal(message) {
 	document.getElementById("oper-hint-message").innerText = message;
 	document.getElementById("oper-hint-modal").style.display = "flex";
 }
 
-function closeOperHintModal() {
-	document.getElementById("oper-hint-modal").style.display = "none";
+function closeOperHintModal(event) {
+	if (!event || event.target === document.getElementById("oper-hint-modal")) {
+		document.getElementById("oper-hint-modal").style.display = "none";
+	}
 }
 
 // Check if oper-hint has content and show modal dynamically
-	document.addEventListener("DOMContentLoaded", function () {
-		const operHint = document.getElementById("oper-hint");
-		const observer = new MutationObserver(() => {
-			if (operHint.innerText.trim() !== "") {
-				showOperHintModal(operHint.innerText);
-			}
-		});
-		observer.observe(operHint, { childList: true, subtree: true });
+document.addEventListener("DOMContentLoaded", function () {
+	const operHint = document.getElementById("oper-hint");
+	const observer = new MutationObserver(() => {
+		if (operHint.innerText.trim() !== "") {
+			showOperHintModal(operHint.innerText);
+		}
+});
+observer.observe(operHint, { childList: true, subtree: true });
 });
 
-// Get the tos modal
-var modal = document.getElementById("terms-modal");
+////////////////////////////
+// terms-of-service modal //
+////////////////////////////
+
+function closeTOSModal(event) {
+	if (!event || event.target === document.getElementById("tos-modal")) {
+		document.getElementById("tos-modal").style.display = "none";
+	}
+}
+
+var modal = document.getElementById("tos-modal");
 
 // Get the link that opens the modal
-var link = document.getElementById("terms-link");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var link = document.getElementById("tos-link");
 
 // When the user clicks the link, open the modal 
 link.onclick = function(event) {
   event.preventDefault(); // Prevent default link behavior
   modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
 }
 
 function useFormAuthUtil () {
