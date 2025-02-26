@@ -95,6 +95,11 @@ p {
     border-radius: 3px;
 }
 
+.terms-link {
+    text-decoration: none;
+    color: #28a745;
+}
+
 #button-login {
     width: 100%;
     border: none;
