@@ -714,3 +714,59 @@ p {
     display: inline-block;
     margin: 0 16px;
   }
+
+/* Responsive Design Enhancements */
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin: 50px auto;
+        padding: 15px;
+    }
+    .oper-section-item {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .container {
+        width: 95%;
+        margin: 20px auto;
+        padding: 10px;
+    }
+    h1 {
+        font-size: 18px;
+    }
+    h3, p {
+        font-size: 14px;
+    }
+    #button-login {
+        font-size: 16px;
+        padding: 8px;
+    }
+    .logo {
+        width: 100px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .container {
+        width: 100%;
+        padding: 5px;
+    }
+    h1 {
+        font-size: 16px;
+    }
+    h3, p {
+        font-size: 12px;
+    }
+    #button-login {
+        font-size: 14px;
+        padding: 6px;
+    }
+    .logo {
+        width: 100px;
+    }
+}
