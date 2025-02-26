@@ -24,7 +24,7 @@ html {
     border-radius: 0px 0px 10px 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     min-width: 220px;
-    border-bottom: 30px solid #3872B8;
+    border-bottom: 30px solid #28a745;
 }
 
 .oper-section-item {
@@ -41,7 +41,7 @@ html {
     width: calc(100% - 20px);
     height: 50px;
     line-height: 20px;
-    background-color: #3872B8;
+    background-color: #28a745;
     border-radius: 10px 10px 0px 0px;
     padding: 0 10px;
 }
@@ -123,6 +123,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .terms-link {
     text-decoration: none;
+	color: #28a745
 }
 
 .oper-hint {
@@ -435,7 +436,7 @@ input[type=number] {
 
 .tab-link {
     padding: 10px 15px;
-    background: #3872B8;
+    background: #28a745;
     color: white;
     border: none;
     cursor: pointer;
@@ -444,7 +445,7 @@ input[type=number] {
 }
 
 .tab-link.active {
-    background: #0056b3;
+    background: #218838;
 }
 
 .tab-content {
@@ -524,7 +525,7 @@ input[type=number] {
         width: 95%;
         margin: 30px auto;
         padding: 10px;
-        border-bottom: 20px solid #3872B8;
+        border-bottom: 20px solid #28a745;
     }
     h1 {
         font-size: 18px;
@@ -585,7 +586,7 @@ input[type=number] {
         width: 95%;
         margin: 20px auto;
         padding: 10px;
-        border-bottom: 15px solid #3872B8;
+        border-bottom: 15px solid #28a745;
     }
     h1 {
         font-size: 18px;
@@ -658,3 +659,113 @@ input[type=number] {
         max-width: 60px;
     }
 }
+
+/* Apply Dark Theme */
+body {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}
+
+.container {
+    background-color: rgba(30, 30, 30, 0.95) !important;
+    color: #ffffff !important;
+    border-bottom: 30px solid #28a745 !important;
+}
+
+h1, h3, p, label {
+    color: #ffffff !important;
+}
+
+input[type="number"], input[type="text"], input[type="password"] {
+    background-color: #333 !important;
+    color: #ffffff !important;
+    border: 1px solid #555 !important;
+}
+
+input::placeholder {
+    color: #bbbbbb !important;
+}
+
+#button-login {
+    background-color: #28a745 !important;
+    color: #ffffff !important;
+}
+
+#button-login:hover {
+    background-color: #218838 !important;
+}
+
+/* Adjust modal for dark theme */
+.modal-content {
+    background-color: #222 !important;
+    color: #ffffff !important;
+    border: 1px solid #444 !important;
+}
+
+.close {
+    color: #ffffff !important;
+}
+
+.close:hover {
+    color: red !important;
+}
+
+/* Ensure login form elements are dark */
+#login-form {
+    background-color: #1e1e1e !important;
+    padding: 20px !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1) !important;
+}
+
+#login-form input {
+    background-color: #333 !important;
+    color: #ffffff !important;
+    border: 1px solid #555 !important;
+}
+
+#login-form input::placeholder {
+    color: #aaaaaa !important;
+}
+
+#login-form button {
+    background-color: #28a745 !important;
+    color: #ffffff !important;
+    font-weight: bold !important;
+}
+
+#login-form button:hover {
+    background-color: #218838 !important;
+}
+
+/* Ensure tab content is dark */
+.tab-content {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    border: 1px solid #444 !important;
+}
+
+.tab-link {
+    background: #333 !important;
+    color: white !important;
+}
+
+.tab-link.active {
+    background: #28a745 !important;
+}
+
+/* Responsive Adjustments for Dark Theme */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90% !important;
+        padding: 15px !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 95% !important;
+        padding: 10px !important;
+    }
+}
+
