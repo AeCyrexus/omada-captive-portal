@@ -57,11 +57,12 @@ p {
     background-color: #28a745;
     border-radius: 10px 10px 0px 0px;
     padding: 0 10px;
+	font-size: 20px;
 }
 
 .container-footer {
     position: absolute;
-	font-size: 10px;
+	font-size: 15px;
 	bottom: -50px;
     left: 0;
     width: calc(100% - 20px);
@@ -100,18 +101,35 @@ p {
     color: #28a745;
 }
 
+#hotspot-selector {
+	background-color: #333333;
+}
+
+/* Fix input field width */
+#login-form input {
+    width: 100%; /* Makes inputs fit inside the container */
+    max-width: 100%;
+    box-sizing: border-box; /* Ensures padding does not affect width */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+	background-color: #333333;
+	color: #ffffff;
+}
+
 #button-login {
     width: 100%;
     border: none;
     background-color: #28a745;
     color: #ffffff;
     border-radius: 100px;
-    cursor: pointer;
     font-weight: bolder;
+    cursor: pointer;
 }
 
 #button-login:hover {
-    background-color: #009647;
+    background-color: #006400;
 }
 
 #input-phone-num {
