@@ -40,7 +40,7 @@ p {
 
 .container {
     position: relative;
-    width: 30%;
+    width: 20%;
     margin: 100px auto;
     padding: 20px;
     background-color: rgba(30, 30, 30, 0.95);
@@ -91,7 +91,7 @@ p {
 
 .oper-section-item {
     height: 42px;
-    width: 500px;
+    width: 100%;
     margin-bottom: 12px;
     border-radius: 3px;
 }
@@ -735,9 +735,14 @@ p {
   }
 
 /* Responsive Design Enhancements */
+@media screen and (max-width: 1440px) {
+    .container {
+        width: 50%;
+    }
+}
 @media screen and (max-width: 1024px) {
     .container {
-        width: 70%;
+        width: 50%;
     }
 }
 @media screen and (max-width: 768px) {
@@ -745,9 +750,6 @@ p {
         width: 90%;
         margin: 50px auto;
         padding: 15px;
-    }
-    .oper-section-item {
-        width: 100%;
     }
 }
 @media screen and (max-width: 480px) {
