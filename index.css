@@ -658,31 +658,3 @@ input[type=number] {
         max-width: 60px;
     }
 }
-
-/* Ensure the container is always centered */
-.container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 220px;
-    max-width: 90%;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive Adjustments */
-@media screen and (max-width: 768px) {
-    .container {
-        width: 90%;
-        padding: 15px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .container {
-        width: 95%;
-        padding: 10px;
-    }
