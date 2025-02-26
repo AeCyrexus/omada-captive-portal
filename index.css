@@ -445,6 +445,35 @@ p {
   padding: 0;
 }
 
+.oper-hint-modal {
+	display: none;
+	position: fixed;
+	z-index: 9999;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	align-items: center;
+	justify-content: center;
+}
+
+.oper-hint-modal-content {
+	background-color: #222;
+	color: #fff;
+	padding: 20px;
+	border-radius: 10px;
+	width: 60%;
+	max-width: 400px;
+	text-align: center;
+}
+
+.oper-hint-close {
+	float: right;
+	font-size: 28px;
+	cursor: pointer;
+}
+
 /* Modal container */
 .modal {
     display: none; /* Hide modal by default */
@@ -460,7 +489,6 @@ p {
     align-items: center;
     justify-content: center;
     border-radius: 10px
-
 }
 
 .modal-content {
@@ -735,7 +763,7 @@ p {
   }
 
 /* Responsive Design Enhancements */
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 2560px) {
     .container {
         width: 50%;
     }

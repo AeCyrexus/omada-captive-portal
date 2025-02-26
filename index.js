@@ -70,7 +70,7 @@ var hotspotMap = {
 };
 
 var errorHintMap = {
-    "0": "ok",
+    "0": "You're now connected",
     "-1": "General error.",
     "-41500": "Invalid authentication type.",
     "-41501": "Failed to authenticate.",
@@ -385,7 +385,28 @@ Ajax.post(
     }
 );
 
-// Get the modal
+// oper-hint modal
+function showOperHintModal(message) {
+	document.getElementById("oper-hint-message").innerText = message;
+	document.getElementById("oper-hint-modal").style.display = "flex";
+}
+
+function closeOperHintModal() {
+	document.getElementById("oper-hint-modal").style.display = "none";
+}
+
+// Check if oper-hint has content and show modal dynamically
+	document.addEventListener("DOMContentLoaded", function () {
+		const operHint = document.getElementById("oper-hint");
+		const observer = new MutationObserver(() => {
+			if (operHint.innerText.trim() !== "") {
+				showOperHintModal(operHint.innerText);
+			}
+		});
+		observer.observe(operHint, { childList: true, subtree: true });
+});
+
+// Get the tos modal
 var modal = document.getElementById("terms-modal");
 
 // Get the link that opens the modal

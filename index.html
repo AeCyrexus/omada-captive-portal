@@ -32,7 +32,13 @@
 		<h1>ZephyCube Network</h1>
 		<div class="oper-section-outer">
 			<div class="oper-section-inner">
-				<span id="oper-hint" style="color: red"></span>
+				<span id="oper-hint" style="display: none;"></span>
+				<div id="oper-hint-modal" class="oper-hint-modal">
+					<div class="oper-hint-modal-content">
+					<span class="oper-hint-close" onclick="closeOperHintModal()">&times;</span>
+					<p id="oper-hint-message"></p>
+					</div>
+				</div>
 				<div id="hotspot-section">
 					<select id="hotspot-selector" class="oper-section-item"></select>
 				</div>
@@ -64,7 +70,9 @@
 					<p>By connecting to the Wi-Fi you agree to the <a href="#" id="terms-link" class="terms-link">Terms of Service.</a></p>
 			</div>
 		</div>
-		<div class="container-footer">v1.6 | Copyright © 2019-2025 ZephyCube. All Rights Reserved.</div>
+			<div class="container-footer">
+				v1.8 | Copyright © 2019-2025 ZephyCube. All Rights Reserved.
+			</div>
 	</div>
 	<div id="terms-modal" class="modal">
 	  <div class="modal-content">
@@ -116,7 +124,6 @@
 		  </div>
 	  </div>
 	</div>
-
 	<script src="jquery.min.js"></script>
 	<script src="index.js"></script>
 </body>
