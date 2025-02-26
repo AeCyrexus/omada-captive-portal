@@ -1,13 +1,15 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Cache-control" content="public">
-<title>ZephyCube Network</title>
-<link rel="icon" type="image/png" href="logo.png">
-<link rel="stylesheet" href="index.css" type="text/css" />
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-control" content="public">
+	<title>ZephyCube Network</title>
+	<link rel="icon" type="image/png" href="logo.png">
+	<link rel="stylesheet" href="index.css" type="text/css" />
+</head>
 <body class="portal">
-<!-- Preloader -->
-    <div id="preloader">
+	<div id="preloader">
 		<div class="loader">
 			<svg viewBox="0 0 80 80">
 				<circle id="test" cx="40" cy="40" r="32"></circle>
@@ -23,9 +25,7 @@
 				<rect x="8" y="8" width="64" height="64"></rect>
 			</svg>
 		</div>
-    </div>      
-<!-- Container -->
-<!-- Header -->	
+	</div>      
 	<div class="container">
 		<div class="container-header"><h3 id="greeting"></h3></div>	
 		<img class="logo" src="logo.png" alt="Logo">
@@ -61,67 +61,63 @@
 				<div id="button-area">
 					<button id="button-login" class="button oper-section-item">CONNECT</button>
 				</div>
-			        <p>By connecting to the Wi-Fi you agree to the <a href="#" id="terms-link" class="terms-link">Terms of Service.</a></p>
+					<p>By connecting to the Wi-Fi you agree to the <a href="#" id="terms-link" class="terms-link">Terms of Service.</a></p>
 			</div>
 		</div>
-		<div class="container-footer">v1.0 | Copyright © 2019-2025 ZephyCube. All Rights Reserved.</div>
+		<div class="container-footer">v1.2 | Copyright © 2019-2025 ZephyCube. All Rights Reserved.</div>
+	</div>
+	<div id="terms-modal" class="modal">
+	  <div class="modal-content">
+		<span class="close">&times;</span>
+		<h2>Terms of Service</h2>
+		
+		<h3>1. Access to Wi-Fi:</h3>
+		<p>This Wi-Fi is provided as a service.</p>
+		<p>Your access to the Wi-Fi service is entirely at the discretion of the Management.</p>
+		<p>The Management reserves the right to block, suspend, limit, or terminate your access to the service at any time for reasons including, but not limited to, violation of this agreement, actions that may lead to liability for Mariden Resort, disruption of access to other users or networks, or violation of applicable laws or regulations.</p>
+		<p>You must accept this agreement each time you use the Wi-Fi service, and it is your responsibility to review it for any changes.</p>
+		
+		<h3>2. Acceptable Use of the Service:</h3>
+		<p>Your use of the Wi-Fi service and any online activities conducted through it shall not violate any applicable law or regulation or infringe upon the rights of the Management or any third party.</p>
+		<p>The Management cannot accept responsibility for any injury or loss resulting from inaccurate, unsuitable, offensive, or illegal internet communications.</p>
+		
+		<h3>3. Disclaimer:</h3>
+		<p>The Wi-Fi service may not be uninterrupted or error-free.</p>
+		<p>Viruses or other harmful applications may be available through the service.</p>
+		<p>The Management does not guarantee the security of the service, and unauthorized third parties may access your computer or files or otherwise monitor your connection.</p>
+		
+		<h3>4. Prohibited Activities:</h3>
+		<p>The use of the Wi-Fi service for the following activities is strictly prohibited:</p>
+		<ul>
+		  <li>Spamming and invasion of privacy of others</li>
+		  <li>Violating intellectual property law</li>
+		  <li>Transmitting obscene or indecent speech or materials</li>
+		  <li>Transmitting defamatory or abusive language</li>
+		  <li>Hacking or distributing internet viruses, worms, trojan horses, or other destructive activities.</li>
+		</ul>
+
+		<h3>5. Additional Information:</h3>
+		<p>The Management reserves the right to modify these terms and conditions at any time without prior notice. Please check for updates regularly.</p>
+		<p>Please ensure that you comply with these terms while using this Wi-Fi.</p>
+	  </div>
+	</div>
+	<div id="form-auth-msg">
+	  <div id="form-auth-outer">
+		  <div id="form-auth-close"></div>
+		  <div id="form-auth-inner">
+			  <div id="form-auth-header">
+				  <div id="form-auth-title"></div>
+				  <div id="form-auth-note"></div>
+			  </div>
+			<div id="form-auth-content"></div>
+			  <div id="form-auth-footer">
+				  <a id="form-auth-submit" href="javascript:void(0);">Submit</a>
+			  </div>
+		  </div>
+	  </div>
 	</div>
 
-<!-- Terms of Service Modal -->
-    <div id="terms-modal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Terms of Service</h2>
-        
-        <h3>1. Access to Wi-Fi:</h3>
-        <p>This Wi-Fi is provided as a service.</p>
-        <p>Your access to the Wi-Fi service is entirely at the discretion of the Management.</p>
-        <p>The Management reserves the right to block, suspend, limit, or terminate your access to the service at any time for reasons including, but not limited to, violation of this agreement, actions that may lead to liability for Mariden Resort, disruption of access to other users or networks, or violation of applicable laws or regulations.</p>
-        <p>You must accept this agreement each time you use the Wi-Fi service, and it is your responsibility to review it for any changes.</p>
-        
-        <h3>2. Acceptable Use of the Service:</h3>
-        <p>Your use of the Wi-Fi service and any online activities conducted through it shall not violate any applicable law or regulation or infringe upon the rights of the Management or any third party.</p>
-        <p>The Management cannot accept responsibility for any injury or loss resulting from inaccurate, unsuitable, offensive, or illegal internet communications.</p>
-        
-        <h3>3. Disclaimer:</h3>
-        <p>The Wi-Fi service may not be uninterrupted or error-free.</p>
-        <p>Viruses or other harmful applications may be available through the service.</p>
-        <p>The Management does not guarantee the security of the service, and unauthorized third parties may access your computer or files or otherwise monitor your connection.</p>
-        
-        <h3>4. Prohibited Activities:</h3>
-        <p>The use of the Wi-Fi service for the following activities is strictly prohibited:</p>
-        <ul>
-          <li>Spamming and invasion of privacy of others</li>
-          <li>Violating intellectual property law</li>
-          <li>Transmitting obscene or indecent speech or materials</li>
-          <li>Transmitting defamatory or abusive language</li>
-          <li>Hacking or distributing internet viruses, worms, trojan horses, or other destructive activities.</li>
-        </ul>
-
-        <h3>5. Additional Information:</h3>
-        <p>The Management reserves the right to modify these terms and conditions at any time without prior notice. Please check for updates regularly.</p>
-        <p>Please ensure that you comply with these terms while using this Wi-Fi.</p>
-      </div>
-    </div>
-	
-    <div id="form-auth-msg">
-      <div id="form-auth-outer">
-          <div id="form-auth-close"></div>
-          <div id="form-auth-inner">
-              <div id="form-auth-header">
-                  <div id="form-auth-title"></div>
-                  <div id="form-auth-note"></div>
-              </div>
-            <div id="form-auth-content"></div>
-              <div id="form-auth-footer">
-                  <a id="form-auth-submit" href="javascript:void(0);">Submit</a>
-              </div>
-          </div>
-      </div>
-    </div>
-
-    <script src="jquery.min.js"></script>
+	<script src="jquery.min.js"></script>
+	<script src="index.js"></script>
 </body>
-<script src="index.js"></script>
-
-
+</html>
