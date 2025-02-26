@@ -1,0 +1,499 @@
+body {
+    font-family: Arial, sans-serif;
+    position: relative;
+    background: url("background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+  }
+  
+.container {
+    position: relative;
+    width: 30%;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, .9);
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 220px;
+    border-bottom: 30px solid #3872B8;
+}
+
+.oper-section-item {
+    height: 42px;
+    width: 500px;
+    margin-bottom: 12px;
+    border-radius: 3px;
+}
+
+.greeting-container {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: calc(100% - 20px);
+    height: 50px;
+    line-height: 20px;
+    background-color: #3872B8;
+    border-radius: 10px 10px 0px 0px;
+    padding: 0 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #000000;
+}
+
+h3 {
+    text-align: left;
+    color: #ffffff;
+}
+
+p {
+    text-align: left;
+    color: #000000;
+    font-weight: bold;
+}
+
+.input-voucher {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="number"] {
+    width: calc(100% - 22px);
+    padding: 10px 11px;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 21px;
+    font-weight: bolder;
+}
+
+#button-login {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    background-color: #00A74F;
+    color: #fff;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#button-login:hover {
+    background-color: #009647;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 150px;
+    height: auto;
+}
+
+.hours {
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 200px) {
+    .hours {
+        white-space: normal;
+    }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.terms-link {
+    text-decoration: none;
+}
+
+.oper-hint {
+    color: rgb(255, 0, 0);
+    text-align: center;
+    font-size: 25px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    /* Firefox */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Modal container */
+.modal {
+    display: none; /* Hide modal by default */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px
+
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* Adjust vertical margin for centering */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%; /* Adjust width as needed */
+    max-width: 500vh; /* Limit maximum width */
+    max-height: 70vh; /* Limit maximum height */
+    overflow-y: auto; /* Enable vertical scroll if content exceeds max-height */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Close button */
+.close {
+    color: #000000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    }
+
+.close:hover,
+.close:focus {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Styling for the modal content */
+.modal-content h1 {
+    font-size: 13px; /* Adjust size as needed */
+    font-weight: normal; /* Ensure text is not bold */
+    margin-bottom: 0.5em; /* Space between each <h1> */
+    line-height: 1.5; /* Adjust line height for readability */
+}
+
+.modal-content ul {
+    padding-left: 15x; /* Indent the list */
+    margin: 0 0 1em 0; /* Adjust margin */
+}
+
+.modal-content li {
+    font-size: 10px; /* Match the font size of <h1> */
+    font-weight: normal; /* Ensure text is not bold */
+    margin-bottom: 0.5em; /* Space between list items */
+    line-height: 1.5; /* Adjust line height for readability */
+}
+
+/* Preloader styles */
+#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    --path: white;
+    --dot: #f40af0;
+    --duration: 3s;
+    width: 44px;
+    height: 44px;
+    position: relative;
+  }
+  .loader:before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    display: block;
+    background: var(--dot);
+    top: 37px;
+    left: 19px;
+    transform: translate(-18px, -18px);
+    -webkit-animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+            animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  }
+  .loader svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .loader svg rect,
+  .loader svg polygon,
+  .loader svg circle {
+    fill: none;
+    stroke: var(--path);
+    stroke-width: 10px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
+  .loader svg polygon {
+    stroke-dasharray: 145 76 145 76;
+    stroke-dashoffset: 0;
+    -webkit-animation: pathTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+            animation: pathTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  }
+  .loader svg rect {
+    stroke-dasharray: 192 64 192 64;
+    stroke-dashoffset: 0;
+    -webkit-animation: pathRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+            animation: pathRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  }
+  .loader svg circle {
+    stroke-dasharray: 150 50 150 50;
+    stroke-dashoffset: 75;
+    -webkit-animation: pathCircle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+            animation: pathCircle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  }
+  .loader.triangle {
+    width: 48px;
+  }
+  .loader.triangle:before {
+    left: 21px;
+    transform: translate(-10px, -18px);
+    -webkit-animation: dotTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+            animation: dotTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  }
+  
+  @-webkit-keyframes pathTriangle {
+    33% {
+      stroke-dashoffset: 74;
+    }
+    66% {
+      stroke-dashoffset: 147;
+    }
+    100% {
+      stroke-dashoffset: 221;
+    }
+  }
+  
+  @keyframes pathTriangle {
+    33% {
+      stroke-dashoffset: 74;
+    }
+    66% {
+      stroke-dashoffset: 147;
+    }
+    100% {
+      stroke-dashoffset: 221;
+    }
+  }
+  @-webkit-keyframes dotTriangle {
+    33% {
+      transform: translate(0, 0);
+    }
+    66% {
+      transform: translate(10px, -18px);
+    }
+    100% {
+      transform: translate(-10px, -18px);
+    }
+  }
+  @keyframes dotTriangle {
+    33% {
+      transform: translate(0, 0);
+    }
+    66% {
+      transform: translate(10px, -18px);
+    }
+    100% {
+      transform: translate(-10px, -18px);
+    }
+  }
+  @-webkit-keyframes pathRect {
+    25% {
+      stroke-dashoffset: 64;
+    }
+    50% {
+      stroke-dashoffset: 128;
+    }
+    75% {
+      stroke-dashoffset: 192;
+    }
+    100% {
+      stroke-dashoffset: 256;
+    }
+  }
+  @keyframes pathRect {
+    25% {
+      stroke-dashoffset: 64;
+    }
+    50% {
+      stroke-dashoffset: 128;
+    }
+    75% {
+      stroke-dashoffset: 192;
+    }
+    100% {
+      stroke-dashoffset: 256;
+    }
+  }
+  @-webkit-keyframes dotRect {
+    25% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(18px, -18px);
+    }
+    75% {
+      transform: translate(0, -36px);
+    }
+    100% {
+      transform: translate(-18px, -18px);
+    }
+  }
+  @keyframes dotRect {
+    25% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(18px, -18px);
+    }
+    75% {
+      transform: translate(0, -36px);
+    }
+    100% {
+      transform: translate(-18px, -18px);
+    }
+  }
+  @-webkit-keyframes pathCircle {
+    25% {
+      stroke-dashoffset: 125;
+    }
+    50% {
+      stroke-dashoffset: 175;
+    }
+    75% {
+      stroke-dashoffset: 225;
+    }
+    100% {
+      stroke-dashoffset: 275;
+    }
+  }
+  @keyframes pathCircle {
+    25% {
+      stroke-dashoffset: 125;
+    }
+    50% {
+      stroke-dashoffset: 175;
+    }
+    75% {
+      stroke-dashoffset: 225;
+    }
+    100% {
+      stroke-dashoffset: 275;
+    }
+  }
+  .loader {
+    display: inline-block;
+    margin: 0 16px;
+  }
+  
+.tab-container {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.tab-link {
+    padding: 10px 15px;
+    background: #3872B8;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.tab-link.active {
+    background: #0056b3;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Ensure the form container has a defined width */
+#login-form {
+    width: 100%;
+    max-width: 350px; /* Adjust as needed */
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Fix input field width */
+#login-form input {
+    width: 100%; /* Makes inputs fit inside the container */
+    max-width: 100%;
+    box-sizing: border-box; /* Ensures padding does not affect width */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Center the button */
+#button-login {
+    width: 100%;
+    padding: 10px;
+    background-color: #008000; /* Green color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#button-login:hover {
+    background-color: #006400; /* Darker green */
+}
