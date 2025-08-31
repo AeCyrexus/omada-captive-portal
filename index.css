@@ -1,7 +1,13 @@
+/* =====================================================
+   ZephyCube Portal Styles
+   - Theme: dark + accent #c2185b
+   - This file is organized by sections with labels
+   ===================================================== */
 html {
 	-webkit-font-smoothing: antialiased;
 }
 
+/* === Base/Body === */
 body.portal {
 	font-family: Arial, sans-serif;
 	position: relative;
@@ -38,6 +44,7 @@ p {
     font-weight: bold;
 }
 
+/* === Main Container === */
 .container {
     position: relative;
     width: 20%;
@@ -49,6 +56,7 @@ p {
     border-radius: 10px; /* add rounded edges */
 }
 
+/* === Footer === */
 .container-footer {
     border-top: 1px solid #333;
     display: flex;
@@ -102,6 +110,7 @@ p {
 }
 
 /* Fix input field width */
+/* === Form Inputs === */
 #login-form input {
     width: 100%; /* Makes inputs fit inside the container */
     max-width: 100%;
@@ -114,6 +123,7 @@ p {
 	color: #ffffff;
 }
 
+/* === Connect Button === */
 #button-login {
     width: 100%;
     border: none;
@@ -558,6 +568,7 @@ p {
 }
 
 /* Preloader */
+/* === Preloader === */
 #preloader {
     position: fixed;
     left: 0;
@@ -833,6 +844,7 @@ p {
 	}
 }
 
+/* === ToS Agreement (checkbox + label) === */
 .tos-agreement {
     margin: 10px 0; /* more vertical spacing */
     padding: 5px 0;
@@ -842,24 +854,7 @@ p {
     gap: 10px; /* more space between checkbox and text */
 }
 
-.tos-agreement input[type="checkbox"] {
-    transform: scale(1.2);
-    cursor: pointer;
-}
-
-.tos-agreement input[type="checkbox"] {
-    appearance: none; /* remove default */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    width: 18px;
-    height: 18px;
-    border: 2px solid #c2185b;
-    border-radius: 4px;
-    cursor: pointer;
-    position: relative;
-    display: inline-block;
-    background-color: transparent;
-}
+.tos-agreement input[type="checkbox"] {appearance: none; /* remove default */ -webkit-appearance: none; -moz-appearance: none; width: 18px; height: 18px; border: 2px solid #c2185b; border-radius: 4px; cursor: pointer; position: relative; display: inline-block; background-color: transparent; transform: scale(1.2); cursor: pointer;}
 
 .tos-agreement input[type="checkbox"]:checked {
     background-color: #c2185b;

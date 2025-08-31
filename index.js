@@ -1,3 +1,14 @@
+// =====================================================
+// ZephyCube Portal Scripts
+// - Organized by labeled sections
+// - Constants at top; DOM wiring at bottom
+// =====================================================
+
+// ==================
+// Constants
+// ==================
+const PRELOADER_HIDE_DELAY_MS = 2000;   // delay before hiding preloader
+const SIMULATED_CONNECT_MS     = 1500;   // simulated connection duration
 // ==================
 // Preloader
 // ==================
@@ -24,6 +35,10 @@ window.addEventListener("load", function() {
     });
 });
 
+
+// ==================
+// Auth Types & Globals
+// ==================
 var NO_AUTH = 0,
     SIMPLE_PASSWORD = 1,
     EXTERNAL_RADIUS = 2,
@@ -155,6 +170,10 @@ function getQueryStringAsObject () {
     return r;
 }
 
+
+// ==================
+// Bootstrap Portal Settings
+// ==================
 Ajax.post(
     '/portal/getPortalPageSetting',
     JSON.stringify({
@@ -274,7 +293,11 @@ Ajax.post(
                     submitData['originUrl'] = originUrl;
                 }
                 function doAuth () {
-                    Ajax.post(submitUrl, JSON.stringify(submitData).toString(), function(data){
+                    
+// ==================
+// Bootstrap Portal Settings
+// ==================
+Ajax.post(submitUrl, JSON.stringify(submitData).toString(), function(data){
                         data = JSON.parse(data);
                         if(!!data && data.errorCode === 0) {
                             isCommited = true;
@@ -337,7 +360,11 @@ Ajax.post(
             e.preventDefault();
             var phoneNum = document.getElementById("phone-number").value;
             function sendSmsAuthCode () {
-                Ajax.post("/portal/sendSmsAuthCode",
+                
+// ==================
+// Bootstrap Portal Settings
+// ==================
+Ajax.post("/portal/sendSmsAuthCode",
                     JSON.stringify({
                         clientMac: clientMac,
                         apMac: apMac,
@@ -364,6 +391,10 @@ Ajax.post(
     }
 );
 
+
+// ==================
+// Oper-Hint Modal
+// ==================
 /////////////////////
 // oper-hint modal //
 /////////////////////
@@ -390,6 +421,10 @@ document.addEventListener("DOMContentLoaded", function () {
 observer.observe(operHint, { childList: true, subtree: true });
 });
 
+
+// ==================
+// ToS Modal
+// ==================
 ////////////////////////////
 // terms-of-service modal //
 ////////////////////////////
@@ -411,6 +446,10 @@ link.onclick = function(event) {
   modal.style.display = "block";
 }
 
+
+// ==================
+// Form Auth: Utilities
+// ==================
 function useFormAuthUtil () {
   function transferChoices(card) {
     var choices = [];
@@ -495,6 +534,10 @@ function useFormAuthUtil () {
   }
 }
 
+
+// ==================
+// Form Auth: Controller
+// ==================
 function useFormAuthController() {
   var formAuthUtil  = useFormAuthUtil()
 
@@ -1022,6 +1065,10 @@ function useFormAuthController() {
   }
 }
 
+
+// ==================
+// Helpers
+// ==================
 function escapeHtml(string) {
   if (string === null || string === undefined) {
     return "";
@@ -1036,6 +1083,10 @@ function escapeHtml(string) {
   return r;
 };
 
+
+// ==================
+// Footer Clock
+// ==================
 // ==================
 // Clock (24-hour)
 // ==================
@@ -1049,6 +1100,10 @@ function updateClock() {
 setInterval(updateClock, 1000);
 updateClock();
 
+
+// ==================
+// Gate CONNECT on ToS
+// ==================
 // Enable CONNECT only when "I agree" is checked
 document.addEventListener("DOMContentLoaded", function () {
     const checkbox = document.getElementById("agree-checkbox");
