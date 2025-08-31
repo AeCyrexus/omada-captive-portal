@@ -1,11 +1,13 @@
-// Preloader //
+// ==================
+// Preloader
+// ==================
 window.addEventListener("load", function() {
     const preloader = document.getElementById("preloader");
 
     // Add a delay before hiding the preloader
     setTimeout(function() {
         preloader.style.display = 'none';
-    }, 1000); // 1-second delay
+    }, 2000); // 1-second delay
 
     // Add event listener to the "CONNECT" button
     const connectButton = document.getElementById("button-login");
@@ -18,10 +20,10 @@ window.addEventListener("load", function() {
             // Hide the preloader after the connection process is done
             preloader.style.display = 'none';
             // Add your connection logic here
-        }, 3000); // Simulate a 3-second connection process
+        }, 1500); // Simulate a 3-second connection process
     });
 });
-// Preloader END //
+
 var NO_AUTH = 0,
     SIMPLE_PASSWORD = 1,
     EXTERNAL_RADIUS = 2,
@@ -152,28 +154,7 @@ function getQueryStringAsObject () {
     }
     return r;
 }
-// Function to set the greeting dynamically
-function setGreeting() {
-    // Get the current hour
-    var currentHour = new Date().getHours();
-    
-    // Get the greeting container
-    var greetingContainer = document.getElementById("greeting");
-    
-    // Update the greeting based on the current hour
-    if (currentHour >= 0 && currentHour < 12) {
-        greetingContainer.textContent = "Good Morning!";
-    } else if (currentHour >= 12 && currentHour < 18) {
-        greetingContainer.textContent = "Good Afternoon!";
-    } else {
-        greetingContainer.textContent = "Good Evening!";
-    }
-}
 
-// Call setGreeting function after the DOM content is loaded
-document.addEventListener("DOMContentLoaded", function() {
-    setGreeting();
-});
 Ajax.post(
     '/portal/getPortalPageSetting',
     JSON.stringify({
@@ -380,8 +361,6 @@ Ajax.post(
         });
         pageConfigParse();
         
-                // Call setGreeting to set the greeting dynamically
-                setGreeting();
     }
 );
 
@@ -1056,3 +1035,28 @@ function escapeHtml(string) {
   r = r.replace(/\s/g, "&nbsp;");
   return r;
 };
+
+// ==================
+// Clock (24-hour)
+// ==================
+function updateClock() {
+    const now = new Date();
+    const clock = document.getElementById("clock");
+    if (clock) {
+        clock.textContent = now.toLocaleTimeString("en-GB", { hour12: false });
+    }
+}
+setInterval(updateClock, 1000);
+updateClock();
+
+// Enable CONNECT only when "I agree" is checked
+document.addEventListener("DOMContentLoaded", function () {
+    const checkbox = document.getElementById("agree-checkbox");
+    const connectButton = document.getElementById("button-login");
+
+    if (checkbox && connectButton) {
+        checkbox.addEventListener("change", function () {
+            connectButton.disabled = !checkbox.checked;
+        });
+    }
+});

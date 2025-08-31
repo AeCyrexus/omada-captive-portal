@@ -5,7 +5,7 @@ html {
 body.portal {
 	font-family: Arial, sans-serif;
 	position: relative;
-    background: url("assets/background.jpg") no-repeat center center fixed;
+    background: #121212;
     background-size: cover;
     min-height: 100vh;
     display:flex;
@@ -46,32 +46,27 @@ p {
     background-color: rgba(30, 30, 30, 0.95);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     min-width: 220px;
-}
-
-.container-header {
-    position: absolute;
-    top: -50px;
-    left: 0;
-    width: calc(100% - 20px);
-    line-height: 20px;
-    background-color: #c2185b;
-    border-radius: 10px 10px 0px 0px;
-    padding: 0 10px;
-	font-size: 20px;
+    border-radius: 10px; /* add rounded edges */
 }
 
 .container-footer {
+    border-top: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* more space on sides */
     position: absolute;
-	font-size: 15px;
-	bottom: -50px;
+    bottom: -40px;
     left: 0;
-    width: calc(100% - 20px);
+    width: calc(100% - 40px); /* align with container */
     height: 50px;
     line-height: 50px;
-    background-color: #c2185b;
-    border-radius: 0px 0px 10px 10px;
-    padding: 0 10px;
-	color: #ffffff;
+    background-color: #181818;
+    border-radius: 0 0 10px 10px; /* rounded footer edges */
+    color: #ffffff;
+}
+.footer-left, #clock {
+    white-space: nowrap;
 }
 
 .oper-section-outer {
@@ -127,6 +122,11 @@ p {
     border-radius: 100px;
     font-weight: bolder;
     cursor: pointer;
+}
+
+#button-area {
+    margin-top: 15px;  /* space above button */
+    margin-bottom: 20px; /* space below button */
 }
 
 #button-login:hover {
@@ -831,4 +831,49 @@ p {
 	.container-footer {
 		font-size: 10px;
 	}
+}
+
+.tos-agreement {
+    margin: 10px 0; /* more vertical spacing */
+    padding: 5px 0;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* more space between checkbox and text */
+}
+
+.tos-agreement input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.tos-agreement input[type="checkbox"] {
+    appearance: none; /* remove default */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #c2185b;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+}
+
+.tos-agreement input[type="checkbox"]:checked {
+    background-color: #c2185b;
+}
+
+.tos-agreement input[type="checkbox"]:checked::after {
+    content: "✔";
+    color: #fff;
+    font-size: 10px;
+    position: absolute;
+    top: 0;
+    left: 2px;
+}
+
+.tos-agreement label {
+    cursor: pointer;
 }
